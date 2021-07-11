@@ -8,13 +8,18 @@ export class ClassCounter extends Component {
         }
     }
     incrementCount = () => {
-        this.setState({
-            count: this.state.count + 1,
-        })
+        this.setState((prevState) => ({
+            count: prevState.count + 1,
+        }))
     }
     decrementCount = () => {
+        this.setState((prevState) => ({
+            count: prevState.count - 1,
+        }))
+    }
+    resetCount = () => {
         this.setState({
-            count: this.state.count - 1,
+            count: 1,
         })
     }
     render() {
@@ -24,6 +29,7 @@ export class ClassCounter extends Component {
                 <button onClick={this.decrementCount}>Minus</button>
                 {this.state.count}
                 <button onClick={this.incrementCount}>Plus</button>
+                <button onClick={this.resetCount}>Reset</button>
             </>
         )
     }

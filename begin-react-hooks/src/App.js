@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {ClassCounter} from './components/ClassCounter';
-
+import FuncObject from './components/FuncObject';
 
 function App() {
 
@@ -34,6 +34,7 @@ function App() {
       <span>{count}-{flight}</span>
       <button onClick={incrementCount}>+</button>
       <ClassCounter />
+      <FuncObject />
     </>
   );
 }

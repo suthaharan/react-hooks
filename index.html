@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width=600></canvas>
+    <script type="text/javascript">
+        var ctx = document.querySelector("canvas").getContext("2d");
+        var gr = ctx.createLinearGradient(0, 0, 600, 0);
+        var keys = ["white", "gold", "#c07", "#20008c", "black"];
+
+        // add color stops to gradient:
+        for(var i = 0, key; key = keys[i]; i++) {
+        gr.addColorStop(i / (keys.length-1), key);
+        }
+
+        ctx.fillStyle = gr;
+        ctx.fillRect(0, 0, 600, 20);
+    </script>
+
+
+    <canvas id="rainbow" width=600></canvas>
+    <script type="text/javascript">
+        var ctx = document.getElementById("rainbow").getContext("2d");
+        var gr = ctx.createLinearGradient(0, 0, 600, 0);
+        var keys = ["#87cefa", "#9de24f", "#ffff66", "#ffbd55", "#ff6666"];
+
+        // add color stops to gradient:
+        for(var i = 0, key; key = keys[i]; i++) {
+        gr.addColorStop(i / (keys.length-1), key);
+        }
+
+        ctx.fillStyle = gr;
+        ctx.fillRect(0, 0, 600, 20);
+    </script>
+    <canvas id="rainbow2" width=600></canvas>
+    <script type="text/javascript">
+        var ctx = document.getElementById("rainbow2").getContext("2d");
+        var gr = ctx.createLinearGradient(0, 0, 600, 0);
+        var keys = ["#FCCFF4", "#BCB0EE", "#A6D5FD", "#B4F1B3", "#F7F3CD", "#F2B6AE"];
+
+        // add color stops to gradient:
+        for(var i = 0, key; key = keys[i]; i++) {
+        gr.addColorStop(i / (keys.length-1), key);
+        }
+
+        ctx.fillStyle = gr;
+        ctx.fillRect(0, 0, 600, 20);
+    </script>
+
+</body>
+</html>

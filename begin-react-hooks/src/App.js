@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import {ClassCounter} from './components/ClassCounter';
 import FuncObject from './components/FuncObject';
+import FuncArray from './components/FuncArray';
+import { HookEffect1 } from './components/HookEffect1';
+import { HookEffect2 } from './components/HookEffect2';
 
 function App() {
 
@@ -35,6 +38,9 @@ function App() {
       <button onClick={incrementCount}>+</button>
       <ClassCounter />
       <FuncObject />
+      <FuncArray />
+      <HookEffect1 />
+      <HookEffect2 />
     </>
   );
 }
